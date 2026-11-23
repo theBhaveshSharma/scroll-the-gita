@@ -1,0 +1,98 @@
+{
+  "morning": [
+    {
+      "id": "morning-mangalam",
+      "title": "Morning Mangalam",
+      "title_hi": "प्रातः मंगलम्",
+      "sanskrit": "शुभं करोति कल्याणं आरोग्यं धनसंपदा। शत्रुबुद्धिविनाशाय दीपज्योतिर्नमोऽस्तुते॥",
+      "transliteration": "śubhaṃ karoti kalyāṇaṃ ārogyaṃ dhana-saṃpadā | śatru-buddhi-vināśāya dīpa-jyotir namo'stute ||",
+      "english": "I bow to the lamp of wisdom that brings auspiciousness, health, and prosperity, and destroys hostile thoughts.",
+      "hindi": "मैं ज्ञान के दीप को नमन करता हूँ जो शुभ, आरोग्य और समृद्धि लाता है, और शत्रु-बुद्धि का नाश करता है।",
+      "premium": false
+    },
+    {
+      "id": "morning-gayatri",
+      "title": "Gayatri Invocation",
+      "title_hi": "गायत्री स्मरण",
+      "sanskrit": "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥",
+      "transliteration": "oṃ bhūr bhuvaḥ svaḥ tat savitur vareṇyaṃ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt ||",
+      "english": "We meditate on the glory of the Creator who has created the universe, who is worthy of worship, who is the remover of sin and ignorance. May He enlighten our intellect.",
+      "hindi": "हम उस स्रष्टा के तेज का ध्यान करते हैं जो पूजनीय है और पाप-अज्ञान का हरण करता है। वह हमारी बुद्धि को प्रकाशित करे।",
+      "premium": false
+    },
+    {
+      "id": "morning-dedication",
+      "title": "Dedication of the Day",
+      "title_hi": "दिन का समर्पण",
+      "sanskrit": "कायेन वाचा मनसेंद्रियैर्वा बुद्ध्यात्मना वा प्रकृतेः स्वभावात्। करोमि यद्यत् सकलं परस्मै नारायणायेति समर्पयामि॥",
+      "transliteration": "kāyena vācā manasendriyair vā buddhyātmanā vā prakṛteḥ svabhāvāt | karomi yad yat sakalaṃ parasmai nārāyaṇāyeti samarpayāmi ||",
+      "english": "Whatever I do with body, speech, mind, senses, intellect, or natural impulse — I offer it all to Narayana.",
+      "hindi": "जो कुछ मैं शरीर, वाणी, मन, इंद्रियों, बुद्धि या स्वभाव से करता हूँ — वह सब नारायण को समर्पित है।",
+      "premium": true
+    }
+  ],
+  "evening": [
+    {
+      "id": "evening-krishna",
+      "title": "Evening Remembrance",
+      "title_hi": "संध्या स्मरण",
+      "sanskrit": "हरे राम हरे राम राम राम हरे हरे। हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे॥",
+      "transliteration": "hare rāma hare rāma rāma rāma hare hare | hare kṛṣṇa hare kṛṣṇa kṛṣṇa kṛṣṇa hare hare ||",
+      "english": "Chant of the holy names — a quiet close to the day in remembrance of the Divine.",
+      "hindi": "पवित्र नामों का जप — दिव्य स्मरण में दिन का शांत समापन।",
+      "premium": false
+    },
+    {
+      "id": "evening-peace",
+      "title": "Shanti Mantra",
+      "title_hi": "शांति मंत्र",
+      "sanskrit": "ॐ शान्तिः शान्तिः शान्तिः॥",
+      "transliteration": "oṃ śāntiḥ śāntiḥ śāntiḥ ||",
+      "english": "Peace in the body, peace in the mind, peace in the spirit.",
+      "hindi": "शरीर में शांति, मन में शांति, आत्मा में शांति।",
+      "premium": false
+    },
+    {
+      "id": "evening-surrender",
+      "title": "Prayer of Surrender",
+      "title_hi": "शरणागति प्रार्थना",
+      "sanskrit": "त्वमेव माता च पिता त्वमेव त्वमेव बन्धुश्च सखा त्वमेव। त्वमेव विद्या द्रविणं त्वमेव त्वमेव सर्वं मम देव देव॥",
+      "transliteration": "tvam eva mātā ca pitā tvam eva tvam eva bandhuś ca sakhā tvam eva | tvam eva vidyā draviṇaṃ tvam eva tvam eva sarvaṃ mama deva deva ||",
+      "english": "You alone are mother and father, friend and companion, knowledge and wealth — You are my everything, O Lord of Lords.",
+      "hindi": "तुम्हीं माता हो, तुम्हीं पिता; तुम्हीं बंधु और सखा। तुम्हीं विद्या और धन — हे देवों के देव, तुम्हीं मेरे सब कुछ हो।",
+      "premium": true
+    }
+  ],
+  "classic": [
+    {
+      "id": "classic-gita-dhyana",
+      "title": "Gita Dhyana",
+      "title_hi": "गीता ध्यान",
+      "sanskrit": "पार्थाय प्रतिबोधितां भगवता नारायणेन स्वयं व्यासेन ग्रथितां पुराणमुनिना मध्ये महाभारतम्। अद्वैतामृतवर्षिणीं भगवतीमष्टादशाध्यायिनीम् अम्ब त्वामनुसन्दधामि भगवद्गीते भवद्वेषिणीम्॥",
+      "transliteration": "pārthāya pratibodhitāṃ bhagavatā nārāyaṇena svayaṃ vyāsena grathitāṃ purāṇa-muninā madhye mahābhāratam | advaitāmṛta-varṣiṇīṃ bhagavatīm aṣṭādaśādhyāyinīm amba tvām anusandadhāmi bhagavad-gīte bhavadveṣiṇīm ||",
+      "english": "O Mother Bhagavad Gita, eighteen chapters taught by Narayana to Arjuna and woven by Vyasa into the Mahabharata — I meditate on you, destroyer of rebirth.",
+      "hindi": "हे माता भगवद्गीता, नारायण ने अर्जुन को जो अठारह अध्याय सिखाए और व्यास ने महाभारत में गूँथे — मैं तुम्हारा ध्यान करता हूँ, भव-नाशिनी।",
+      "premium": false
+    },
+    {
+      "id": "classic-vasudeva",
+      "title": "Vasudeva Prayer",
+      "title_hi": "वासुदेव प्रार्थना",
+      "sanskrit": "वासुदेवः सर्वमिति स महात्मा सुदुर्लभः॥",
+      "transliteration": "vāsudevaḥ sarvam iti sa mahātmā su-durlabhaḥ ||",
+      "english": "Rare is the great soul who knows: Vasudeva is all. (Bhagavad Gita 7.19)",
+      "hindi": "दुर्लभ है वह महात्मा जो जानता है — वासुदेव ही सर्व है। (भगवद्गीता ७.१९)",
+      "premium": false
+    },
+    {
+      "id": "classic-charama",
+      "title": "Charama Shloka",
+      "title_hi": "चरमा श्लोक",
+      "sanskrit": "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज। अहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥",
+      "transliteration": "sarva-dharmān parityajya mām ekaṃ śaraṇaṃ vraja | ahaṃ tvāṃ sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ ||",
+      "english": "Abandon all duties and take refuge in Me alone. I will liberate you from all sins; do not grieve. (Bhagavad Gita 18.66)",
+      "hindi": "सभी धर्मों को छोड़कर केवल मेरी शरण लो। मैं तुम्हें सब पापों से मुक्त करूँगा; शोक मत करो। (भगवद्गीता १८.६६)",
+      "premium": true
+    }
+  ]
+}

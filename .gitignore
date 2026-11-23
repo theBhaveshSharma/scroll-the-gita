@@ -32,6 +32,10 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+
+# large raw Gita exports (rebuild with scripts/build-gita-data.py)
+data/raw-*.json
 
 # typescript
 *.tsbuildinfo

@@ -1,56 +1,87 @@
+import {
+  CormorantGaramond_500Medium_Italic,
+  CormorantGaramond_600SemiBold,
+} from '@expo-google-fonts/cormorant-garamond';
+import {
+  Literata_400Regular,
+  Literata_500Medium,
+  Literata_600SemiBold,
+} from '@expo-google-fonts/literata';
 import { useFonts } from 'expo-font';
-import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
+import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/components/useColorScheme';
+import { initAds } from '@/lib/ads';
+import { initPremium } from '@/lib/premium';
+import { useAppTheme } from '@/lib/useAppTheme';
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from 'expo-router';
+export { ErrorBoundary } from 'expo-router';
 
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
   anchor: '(tabs)',
 };
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    CormorantGaramond_600SemiBold,
+    CormorantGaramond_500Medium_Italic,
+    Literata_400Regular,
+    Literata_500Medium,
+    Literata_600SemiBold,
   });
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
   }, [error]);
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
+    if (!loaded) return;
+    SplashScreen.hideAsync();
+    initPremium();
+    initAds();
   }, [loaded]);
 
-  if (!loaded) {
-    return null;
-  }
+  if (!loaded) return null;
 
   return <RootLayoutNav />;
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  const theme = useAppTheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: theme.background }}>
+      <StatusBar style={theme.mode === 'dark' ? 'light' : 'dark'} />
+      <Stack
+        screenOptions={{
+          headerStyle: { backgroundColor: theme.backgroundElevated },
+          headerTintColor: theme.text,
+          headerTitleStyle: { fontFamily: 'Literata_600SemiBold' },
+          contentStyle: { backgroundColor: theme.background },
+        }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        <Stack.Screen
+          name="study"
+          options={{
+            presentation: 'modal',
+            headerShown: false,
+            animation: 'slide_from_bottom',
+          }}
+        />
+        <Stack.Screen
+          name="card"
+          options={{ presentation: 'modal', title: 'Verse Card', headerShown: true }}
+        />
+        <Stack.Screen name="premium" options={{ presentation: 'modal', title: 'Premium' }} />
+        <Stack.Screen name="legal/privacy" options={{ title: 'Privacy Policy' }} />
+        <Stack.Screen name="legal/terms" options={{ title: 'Terms of Use' }} />
       </Stack>
-    </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }
