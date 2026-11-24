@@ -47,7 +47,7 @@
     "web": "expo start --web",
     "build:data": "python3 scripts/build-gita-data.py",
     "predeploy": "expo export -p web",
-    "deploy": "gh-pages --nojekyll -d dist"
+    "deploy": "node scripts/deploy-pages.js"
   },
   "private": true
 }
