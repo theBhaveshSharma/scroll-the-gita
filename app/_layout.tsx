@@ -7,6 +7,7 @@ import {
   Literata_500Medium,
   Literata_600SemiBold,
 } from '@expo-google-fonts/literata';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -31,6 +32,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    ...Ionicons.font,
     CormorantGaramond_600SemiBold,
     CormorantGaramond_500Medium_Italic,
     Literata_400Regular,
