@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -129,17 +130,24 @@ export function VerseScreen({
         </View>
 
         <View style={styles.actions} collapsable={false}>
-          <Action label={liked ? t.liked : t.like} onPress={onToggleLike} color={theme.accent} />
           <Action
+            icon={liked ? 'heart' : 'heart-outline'}
+            label={liked ? t.liked : t.like}
+            onPress={onToggleLike}
+            color={theme.accent}
+          />
+          <Action
+            icon={bookmarked ? 'bookmark' : 'bookmark-outline'}
             label={bookmarked ? t.saved : t.save}
             onPress={onToggleBookmark}
             color={theme.accent}
           />
-          <Action label={t.shareCard} onPress={onOpenCard} color={theme.accent} />
+          <Action icon="share-outline" label={t.shareCard} onPress={onOpenCard} color={theme.accent} />
           <TouchableOpacity
             onPress={onOpenStudy}
             activeOpacity={0.75}
             style={[styles.studyBtn, { backgroundColor: theme.accent }]}>
+            <Ionicons name="sparkles" size={16} color="#fff" style={{ marginRight: 6 }} />
             <Text style={styles.studyBtnText}>{t.study}</Text>
           </TouchableOpacity>
         </View>
@@ -150,16 +158,19 @@ export function VerseScreen({
 }
 
 function Action({
+  icon,
   label,
   onPress,
   color,
 }: {
+  icon: keyof typeof Ionicons.glyphMap;
   label: string;
   onPress: () => void;
   color: string;
 }) {
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.7} hitSlop={8} style={styles.actionBtn}>
+      <Ionicons name={icon} size={22} color={color} />
       <Text style={[styles.actionText, { color }]} numberOfLines={1}>
         {label}
       </Text>
@@ -231,30 +242,35 @@ const styles = StyleSheet.create({
     marginTop: 8,
     textAlign: 'center',
     fontFamily: fonts.body,
-    fontSize: 11,
-    opacity: 0.75,
+    fontSize: 12,
+    opacity: 0.8,
   },
   actions: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 6,
+    gap: 4,
     zIndex: 20,
     elevation: 20,
   },
   actionBtn: {
-    paddingVertical: 14,
-    paddingHorizontal: 6,
-    minHeight: 48,
+    alignItems: 'center',
     justifyContent: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    minHeight: 52,
+    minWidth: 56,
+    gap: 4,
   },
   actionText: {
     fontFamily: fonts.bodySemi,
-    fontSize: 15,
+    fontSize: 12,
   },
   studyBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingVertical: 12,
-    paddingHorizontal: 18,
+    paddingHorizontal: 16,
     borderRadius: 999,
     minHeight: 48,
     justifyContent: 'center',
