@@ -49,7 +49,8 @@
       "expo-font"
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/scroll-the-gita"
     }
   }
 }
